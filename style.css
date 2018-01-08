@@ -1,0 +1,12 @@
+#myChart {
+    display: inline-block !important;
+    width: 48% !important;
+    height: 500px !important;
+}
+
+#myChart1 {
+	float: right !important;
+    display: inline-block !important;
+    width: 48% !important;
+    height: 500px !important;
+}
