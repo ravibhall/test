@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Test 2</h2>
+    <p id="output">
+    </p>
+    <script>
+    var emp = {
+        name: "Rajesh",
+        address: {
+            locality: {
+                street: "2nd main domlur"
+            }
+        }
+    };
+    var getObjPath = function(jsObj, path) {
+        var pathArray = path.split('.');
+        var pathLength=pathArray.length;
+        var property;
+        var count=0;
+        while (property = pathArray.shift()) {
+            if (jsObj[property]) {
+            	count+=1;
+                jsObj = jsObj[property];
+                if(count===pathLength){
+                	document.getElementById("output").innerHTML = "Result : " + jsObj;
+                }
+            }else{
+            	document.getElementById("output").innerHTML = "Result : " + null;
+            }
+        }
+    }
+    getObjPath(emp, 'address.locality.street');
+    </script>
+</body>
+
+</html>
